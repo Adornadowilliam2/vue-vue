@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div v-text="num" class="text-center mt-2 font-bold text-3xl underline"></div>
+  <div class="bg-blue-500 text-white text-center p-3 font-serif mt-4" v-if="num === 'Hello'">Positive {{num}} {{num1}}</div>
+  <div v-else>Wrong turn</div>
+  <div v-show="aware">{{num1 + 123456788}}</div>
+    <div v-if="aware">{{num1 + 123456788}}</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data(){
+    return{
+      num: "Hello",
+      num1: 1, 
+      aware:true
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  padding: 0;
+  margin: 0;
 }
+
 </style>
