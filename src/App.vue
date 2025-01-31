@@ -5,8 +5,7 @@
   </nav>
   <main>
     <div class="card-container flex flex-wrap gap-4 justify-evenly p-4">
-      <!-- Use gallery.image to display each image -->
-      <div v-for="(gallery) in galleries" :key="gallery.id" class="card border border-black">
+      <div v-for="(gallery) in galleries" :key="gallery.id" class="card m-4">
         <img :src="gallery.image" class="w-full" alt="Gallery Image" >
         <h2>{{ gallery.name }}</h2>
    
